@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  xampp:
+    image: tomsik68/xampp
+    ports:
+      - "55522:22"
+      - "55580:80"
+    volumes:
+      - "~/dev/SandiaLabsTrafficApp:/www"
