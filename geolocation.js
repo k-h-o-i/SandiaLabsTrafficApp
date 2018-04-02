@@ -100,11 +100,11 @@ function getDirections() {
 function calcRoute() {
 	console.log("calcRoute");
   start = directionsLatLng;
-  end = "50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+  end = "1515 Eubank Blvd SE, Albuquerque, NM 87123";
   var request = {
     origin:start,
     destination:end,
-    travelMode: google.maps.TravelMode.TRANSIT
+    travelMode: google.maps.TravelMode.DRIVING
   };
   directionsService.route(request, function(result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
