@@ -128,14 +128,12 @@ var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
 var service = new google.maps.DistanceMatrixService();
 service.getDistanceMatrix(
   {
-    origins: [origin1, origin2],
+    origins: [origin1],
     destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
     travelMode: 'DRIVING',
-    transitOptions: TransitOptions,
-    drivingOptions: DrivingOptions,
-    unitSystem: UnitSystem,
-    avoidHighways: Boolean,
-    avoidTolls: Boolean,
+    unitSystem: google.maps.UnitSystem.METRIC,
+    avoidHighways: false,
+    avoidTolls: false,
   }, callback);
 
 function callback(response, status) {
@@ -161,8 +159,7 @@ function gettravelTimes() {
     } else {
         w.innerHTML = "Geolocation is not supported by this browser.";
     }
-
-  function showDurations() {
+function showDurations() {
   w.innerHTML = "Carlisle: " + duration.text+ 
   "<br>Longitude: " + position.coords.longitude; 
 }
@@ -172,5 +169,5 @@ $(document).on('click', '#gettravelTimes', function(){
     gettravelTimes();
 });
 
-});
-
+}
+)
