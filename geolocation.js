@@ -1,58 +1,20 @@
-//Travel Times Page
-
-function showDirectionsPosition(position) {
-	console.log("showDirectionsPosition");
-    directionsLatitude = position.coords.latitude;
-    directionsLongitude = position.coords.longitude;
-
+//geolocationPage
 var x = document.getElementById("geoLocation");
-var origin1 = new google.maps.LatLng(directionsLatitude, directionsLongitude);
-var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
-var Truman = new google.maps.LatLng(35.057476, -106.588603);
-var Gibson = new google.maps.LatLng(35.058033, -106.561149);
-var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
-var Eubank = new google.maps.LatLng(35.054138, -106.533598);
-
-var service = new google.maps.DistanceMatrixService();
-service.getDistanceMatrix(
-  {
-    origins: [origin1],
-    destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
-    travelMode: 'DRIVING',
-    transitOptions: TransitOptions,
-    drivingOptions: DrivingOptions,
-    unitSystem: UnitSystem,
-    avoidHighways: Boolean,
-    avoidTolls: Boolean,
-  }, callback);
-
-  function callback(response, status) {
-    if (status == 'OK') {
-      var origins = response.originAddresses;
-      var destinations = response.destinationAddresses;
-  
-      for (var i = 0; i < origins.length; i++) {
-        var results = response.rows[i].elements;
-        for (var j = 0; j < results.length; j++) {
-          var element = results[j];
-          var distance = element.distance.text;
-          var duration = element.duration.text;
-          var from = origins[i];
-          var to = destinations[j];
-        }
-      }
-    function getLocation() {
-        if (navigator.geolocation) {
-            document.write(duration.text);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
-    }
-  }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
 
-$(document).on('click', '#getTravelTimes', function(){
+$(document).on('click', '#getGeolocation', function(){
     console.log("clicked");
- getTravelTimes();
+    getLocation();
 });
 
 //map page
@@ -154,4 +116,4 @@ function calcRoute() {
 $( document ).on( "pageshow", "#directionsPage", function( event ) {
   getDirectionsLocation();
 });
-}}
+
