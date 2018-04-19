@@ -44,6 +44,22 @@
 
 	<?php include("footer.php") ?>
 </div><!-- /page -->
+
+<!-- Start of fourth page -->
+<div data-role="page" id="traveltimesPage">
+
+	<?php include("header.php") ?>
+
+	<div role="main" class="ui-content">
+		<div id="travelTimes">Travel Times</div>
+		<div id="travelTimes">times</div>
+		<button id="gettravelTimes">get Travel Times</button>
+
+	</div><!-- /content -->
+
+	<?php include("footer.php") ?>
+</div><!-- /page -->
+
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>

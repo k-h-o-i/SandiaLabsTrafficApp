@@ -100,11 +100,11 @@ function getDirections() {
 function calcRoute() {
 	console.log("calcRoute");
   start = directionsLatLng;
-  end = "50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+  end = "1515 Eubank Blvd SE, Albuquerque, NM 87123";
   var request = {
     origin:start,
     destination:end,
-    travelMode: google.maps.TravelMode.TRANSIT
+    travelMode: google.maps.TravelMode.DRIVING
   };
   directionsService.route(request, function(result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
@@ -115,5 +115,62 @@ function calcRoute() {
 
 $( document ).on( "pageshow", "#directionsPage", function( event ) {
   getDirectionsLocation();
+
+//traveltimespage
+var w = document.getElementById(travelTimes);
+var origin1 = directionsLatLng;
+var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
+var Truman = new google.maps.LatLng(35.057476, -106.588603);
+var Gibson = new google.maps.LatLng(35.058033, -106.561149);
+var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
+var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
+
+var service = new google.maps.DistanceMatrixService();
+service.getDistanceMatrix(
+  {
+    origins: [origin1, origin2],
+    destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
+    travelMode: 'DRIVING',
+    transitOptions: TransitOptions,
+    drivingOptions: DrivingOptions,
+    unitSystem: UnitSystem,
+    avoidHighways: Boolean,
+    avoidTolls: Boolean,
+  }, callback);
+
+function callback(response, status) {
+    if (status == 'OK') {
+      var origins = response.originAddresses;
+      var destinations = response.destinationAddresses;
+  
+      for (var i = 0; i < origins.length; i++) {
+        var results = response.rows[i].elements;
+        for (var j = 0; j < results.length; j++) {
+          var element = results[j];
+          var distance = element.distance.text;
+          var duration = element.duration.text;
+          var from = origins[i];
+          var to = destinations[j];
+        }
+      }
+    }
+  }
+function gettravelTimes() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        w.innerHTML = "Geolocation is not supported by this browser.";
+    }
+
+  function showDurations() {
+  w.innerHTML = "Carlisle: " + duration.text+ 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+}
+$(document).on('click', '#gettravelTimes', function(){
+    console.log("clicked");
+    gettravelTimes();
+});
+
 });
 
