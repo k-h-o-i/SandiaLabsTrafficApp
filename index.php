@@ -56,7 +56,9 @@
     <?php include("footer.php") ?>
   </div><!-- /page -->
 
-<<<<<<< HEAD
+master
+
+HEAD
 	<?php include("header.php") ?>
 
 	<div role="main" class="ui-content">
@@ -73,11 +75,15 @@
     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
     <script src="geolocation.js"></script>
-=======
+
+master
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
   <script src="geolocation.js"></script>
->>>>>>> aac16a941538682eaae1b1d2132aaf84704978db
+master
+
+aac16a941538682eaae1b1d2132aaf84704978db
+master
 </body>
 </html>

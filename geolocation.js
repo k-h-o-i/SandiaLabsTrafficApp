@@ -166,11 +166,18 @@ $(document).ready(function () {
       w.innerHTML = "Geolocation is not supported by this browser.";
     }
     function showDurations() {
+master
+      w.innerHTML = "Carlisle: " + duration.text+ 
+        "<br>Longitude: " + position.coords.longitude; 
+    }
+  }
+
+
       w.innerHTML = "Carlisle: " + duration
         "<br>Longitude: " + position.coords.longitude; 
     }
   }
-<<<<<<< HEAD
+HEAD
 function showDurations() {
   w.innerHTML = "Carlisle: " + duration;
 }
@@ -181,11 +188,15 @@ $(document).on('click', '#gettravelTimes', function(){
 
 }
 )
-=======
 
+master
   $('#getTravelTimes').on('click', function() {
     console.log("#getTravelTimes clicked");
     getTravelTimes();
   });
+master
+});
+
 })
->>>>>>> aac16a941538682eaae1b1d2132aaf84704978db
+aac16a941538682eaae1b1d2132aaf84704978db
+master
