@@ -154,7 +154,7 @@ function getTimes(response, status) {
     }
   }
 function showDurations() {
-  w.innerHTML = "Carlisle: " + duration.text;
+  w.innerHTML = "Carlisle: " + duration;
 }
 $(document).on('click', '#gettravelTimes', function(){
     console.log("clicked");

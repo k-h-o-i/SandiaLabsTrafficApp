@@ -51,6 +51,7 @@
 	<?php include("header.php") ?>
 
 	<div role="main" class="ui-content">
+		<p>Travel Times Page</p>
 		<div id="travelTimes">times</div>
 		<button id="gettravelTimes">get travelTimes</button>
 
