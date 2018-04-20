@@ -153,19 +153,13 @@ function callback(response, status) {
       }
     }
   }
-  function gettravelTimes (response, status) {
-    if (status !== google.maps.DistanceMatrixStatus.OK) {
-        console.log('Error:', status);
-    } else {
-        console.log(response);
-    }
 function showDurations() {
   w.innerHTML = "Carlisle: " + duration.text;
 }
 $(document).on('click', '#gettravelTimes', function(){
     console.log("clicked");
-    gettravelTimes();
+    callback();
 });
 
 }
-})
+)
