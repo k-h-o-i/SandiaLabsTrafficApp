@@ -7,62 +7,58 @@
 	<link rel="stylesheet" href="geolocation.css" />
 </head>
 <body>
-<!-- Start of first page -->
-<div data-role="page" id="homePage">
+  <!-- Start of first page -->
+  <div data-role="page" id="homePage">
+    <?php include("header.php") ?>
 
-	<?php include("header.php") ?>
+    <div role="main" class="ui-content">
+      <p>Geolocation Page</p>
+      <div id="geoLocation">geoLocation</div>
+      <button id="getGeolocation">get geolocation</button>
+    </div><!-- /content -->
 
-	<div role="main" class="ui-content">
-		<p>Geolocation Page</p>
-		<div id="geoLocation">geoLocation</div>
-		<button id="getGeolocation">get geolocation</button>
-	</div><!-- /content -->
+    <?php include("footer.php") ?>
+  </div><!-- /page -->
 
-	<?php include("footer.php") ?>
-</div><!-- /page -->
+  <!-- Start of second page -->
+  <div data-role="page" id="mapPage">
+    <?php include("header.php") ?>
 
-<!-- Start of second page -->
-<div data-role="page" id="mapPage">
+    <div role="main" class="ui-content">
+      <div id="map-canvas">map-canvas</div>
+    </div><!-- /content -->
 
-<?php include("header.php") ?>
+    <?php include("footer.php") ?>
+  </div><!-- /page -->
 
-	<div role="main" class="ui-content">
-		<div id="map-canvas">map-canvas</div>
-	</div><!-- /content -->
+  <!-- Start of third page -->
+  <div data-role="page" id="directionsPage">
+    <?php include("header.php") ?>
 
-	<?php include("footer.php") ?>
-</div><!-- /page -->
+    <div role="main" class="ui-content">
+      <div id="directions-canvas">directions-canvas</div>
+    </div><!-- /content -->
 
-<!-- Start of third page -->
-<div data-role="page" id="directionsPage">
+    <?php include("footer.php") ?>
+  </div><!-- /page -->
 
-<?php include("header.php") ?>
+  <!-- Start of fourth page -->
+  <div data-role="page" id="traveltimesPage">
+    <?php include("header.php") ?>
 
-	<div role="main" class="ui-content">
-		<div id="directions-canvas">directions-canvas</div>
-	</div><!-- /content -->
+    <div role="main" class="ui-content">
+      <p>Travel Times</p>
+      <div id="travelTimes">times</div>
+      <button id="getTravelTimes" onClick="console.log('can\'t touch this')">get Travel Times</button>
 
-	<?php include("footer.php") ?>
-</div><!-- /page -->
+    </div><!-- /content -->
 
-<!-- Start of fourth page -->
-<div data-role="page" id="traveltimesPage">
+    <?php include("footer.php") ?>
+  </div><!-- /page -->
 
-	<?php include("header.php") ?>
-
-	<div role="main" class="ui-content">
-		<div id="travelTimes">Travel Times</div>
-		<div id="travelTimes">times</div>
-		<button id="gettravelTimes">get Travel Times</button>
-
-	</div><!-- /content -->
-
-	<?php include("footer.php") ?>
-</div><!-- /page -->
-
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
-    <script src="geolocation.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
+  <script src="geolocation.js"></script>
 </body>
 </html>
