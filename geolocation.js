@@ -159,14 +159,14 @@ $(document).ready(function () {
     }
   })
 
-  function getTravelTimes() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+  function getTravelTimes(response, status) {
+    if (status !== google.maps.DistanceMatrixStatus.OK) {
+        console.log('Error:', status);
     } else {
-      w.innerHTML = "Geolocation is not supported by this browser.";
+        console.log(response);
     }
     function showDurations() {
-      w.innerHTML = "Carlisle: " + duration
+      w.innerHTML = "Carlisle: " + duration+
         "<br>Longitude: " + position.coords.longitude; 
     }
   }
