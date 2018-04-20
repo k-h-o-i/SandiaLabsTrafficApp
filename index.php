@@ -53,7 +53,7 @@
 	<div role="main" class="ui-content">
 		<div id="travelTimes">Travel Times</div>
 		<div id="travelTimes">times</div>
-		<button id="gettravelTimes">get Travel Times</button>
+		<button id="gettravelTimes">get travelTimes</button>
 
 	</div><!-- /content -->
 

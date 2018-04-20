@@ -153,16 +153,14 @@ function callback(response, status) {
       }
     }
   }
-function gettravelTimes() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+  function gettravelTimes (response, status) {
+    if (status !== google.maps.DistanceMatrixStatus.OK) {
+        console.log('Error:', status);
     } else {
-        w.innerHTML = "Geolocation is not supported by this browser.";
+        console.log(response);
     }
 function showDurations() {
-  w.innerHTML = "Carlisle: " + duration.text+ 
-  "<br>Longitude: " + position.coords.longitude; 
-}
+  w.innerHTML = "Carlisle: " + duration.text;
 }
 $(document).on('click', '#gettravelTimes', function(){
     console.log("clicked");
@@ -170,4 +168,4 @@ $(document).on('click', '#gettravelTimes', function(){
 });
 
 }
-)
+})
