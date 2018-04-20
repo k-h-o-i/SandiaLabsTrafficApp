@@ -175,4 +175,4 @@ $(document).ready(function () {
     console.log("#getTravelTimes clicked");
     getTravelTimes();
   });
-})
+});
