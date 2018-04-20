@@ -166,7 +166,7 @@ $(document).ready(function () {
         console.log(response);
     }
     function showDurations() {
-      w.innerHTML = "Carlisle: " + duration+
+      w.innerHTML = "Carlisle: " + duration
         "<br>Longitude: " + position.coords.longitude; 
     }
   }
