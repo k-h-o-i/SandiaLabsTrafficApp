@@ -117,7 +117,7 @@ $( document ).on( "pageshow", "#directionsPage", function( event ) {
   getDirectionsLocation();
 
 //traveltimespage
-var w = document.getElementById(travelTimes);
+var w = document.getElementById("travelTimes");
 var origin1 = directionsLatLng;
 var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
 var Truman = new google.maps.LatLng(35.057476, -106.588603);
@@ -134,9 +134,9 @@ service.getDistanceMatrix(
     unitSystem: google.maps.UnitSystem.METRIC,
     avoidHighways: false,
     avoidTolls: false,
-  }, callback);
+  }, gettravelTimes);
 
-function callback(response, status) {
+function getTimes(response, status) {
     if (status == 'OK') {
       var origins = response.originAddresses;
       var destinations = response.destinationAddresses;
@@ -158,7 +158,7 @@ function showDurations() {
 }
 $(document).on('click', '#gettravelTimes', function(){
     console.log("clicked");
-    callback();
+    getTimes();
 });
 
 }
