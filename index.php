@@ -48,7 +48,6 @@
 <!-- Start of fourth page -->
 <div data-role="page" id="traveltimesPage">
 
-<<<<<<< HEAD
 	<?php include("header.php") ?>
 
 	<div role="main" class="ui-content">
@@ -65,11 +64,5 @@
     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
     <script src="geolocation.js"></script>
-=======
-  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
-  <script src="geolocation.js"></script>
->>>>>>> 5529db6e5c267452f01fc3ed666f23479a42c61f
 </body>
 </html>
