@@ -25,6 +25,11 @@ $(document).ready(function () {
   var mapLatitude;
   var mapLongitude;
   var SandiaLabs;
+  var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
+  var Truman = new google.maps.LatLng(35.057476, -106.588603);
+  var Gibson = new google.maps.LatLng(35.058033, -106.561149);
+  var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
+  var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
 
   function getMapLocation() {
     console.log("getMapLocation");
@@ -58,22 +63,22 @@ $(document).ready(function () {
       map: map,
       title:"Carlisle Gate"
     });
-    var marker = new google.maps.Marker({
+    var marker2 = new google.maps.Marker({
       position: Truman,
       map: map,
       title:"Truman Gate"
     });
-    var marker = new google.maps.Marker({
+    var marker3 = new google.maps.Marker({
       position: Wyoming,
       map: map,
       title:"Wyoming Gate"
     });
-    var marker = new google.maps.Marker({
+    var marker4 = new google.maps.Marker({
       position: Gibson,
       map: map,
       title:"Gibson Gate"
     });
-    var marker = new google.maps.Marker({
+    var marker5 = new google.maps.Marker({
       position: Eubank,
       map: map,
       title:"Eubank Gate"
