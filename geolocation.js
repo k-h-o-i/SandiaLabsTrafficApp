@@ -145,10 +145,16 @@ $(document).ready(function () {
 
   $( document ).on( "pageshow", "#directionsPage", function( event ) {
     getDirectionsLocation();
+  });
 
     //traveltimespage
     var w = document.getElementById(travelTimes);
     var origin1 = directionsLatLng;
+    var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
+    var Truman = new google.maps.LatLng(35.057476, -106.588603);
+    var Gibson = new google.maps.LatLng(35.058033, -106.561149);
+    var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
+    var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
 
     var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix({
@@ -177,7 +183,7 @@ $(document).ready(function () {
         }
       }
     }
-  })
+  
 
   function getTravelTimes() {
     if (navigator.geolocation) {
