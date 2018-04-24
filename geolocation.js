@@ -97,6 +97,7 @@ $(document).ready(function () {
   var start;
   var end;
 
+  
   function getDirectionsLocation() {
     console.log("getDirectionsLocation");
     if (navigator.geolocation) {
@@ -149,16 +150,23 @@ $(document).ready(function () {
 
     //traveltimespage
     var w = document.getElementById(travelTimes);
-    var origin1 = directionsLatLng;
     var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
     var Truman = new google.maps.LatLng(35.057476, -106.588603);
     var Gibson = new google.maps.LatLng(35.058033, -106.561149);
     var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
     var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
 
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
     var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix({
-      origins: [origin1],
+      origins: ["World Trade Center"],
       destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
       travelMode: 'DRIVING',
       unitSystem: google.maps.UnitSystem.METRIC,
@@ -185,12 +193,44 @@ $(document).ready(function () {
     }
   
 
+    function createTable() {
+      var table = document.getElementById('matrix');
+      var tr = addRow(table);
+      addElement(tr);
+      for (var j = 0; j < destinations.length; j++) {
+        var td = addElement(tr);
+        td.setAttribute("class", "destination");
+        td.appendChild(document.createTextNode(destinations[j]));
+      }
+      for (var i = 0; i < origins.length; i++) {
+        var tr = addRow(table);
+        var td = addElement(tr);
+        td.setAttribute("class", "origin");
+        td.appendChild(document.createTextNode(origins[i]));
+        for (var j = 0; j < destinations.length; j++) {
+          var td = addElement(tr, 'element-' + i + '-' + j);
+          td.onmouseover = getRouteFunction(i,j);
+          td.onclick = getRouteFunction(i,j);
+        }
+      }
+    }
+    function populateTable(rows) {
+      for (var i = 0; i < rows.length; i++) {
+        for (var j = 0; j < rows[i].elements.length; j++) {
+          var distance = rows[i].elements[j].distance.text;
+          var duration = rows[i].elements[j].duration.text;
+          var td = document.getElementById('element-' + i + '-' + j);
+          td.innerHTML = distance + "<br/>" + duration;
+        }
+      }
+    }
   function getTravelTimes() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
       w.innerHTML = "Geolocation is not supported by this browser.";
     }
+
     function showDurations() {
       w.innerHTML = "Carlisle: " + duration.text+ 
         "<br>Longitude: " + position.coords.longitude; 
