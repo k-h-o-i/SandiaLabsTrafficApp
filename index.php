@@ -34,18 +34,6 @@
 </div><!-- /page -->
 
 <!-- Start of third page -->
-<div data-role="page" id="directionsPage">
-
-<?php include("header.php") ?>
-
-	<div role="main" class="ui-content">
-		<div id="directions-canvas">directions-canvas</div>
-	</div><!-- /content -->
-
-	<?php include("footer.php") ?>
-</div><!-- /page -->
-
-<!-- Start of fourth page -->
 <div data-role="page" id="traveltimesPage">
 
 	<?php include("header.php") ?>

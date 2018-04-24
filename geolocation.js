@@ -89,65 +89,6 @@ $(document).ready(function () {
     getMapLocation();
   });
 
-  //directionsPage
-  var directionsDisplay;
-  var directionsService = new google.maps.DirectionsService();
-  var directionsMap;
-  var z = document.getElementById("directions-canvas");
-  var start;
-  var end;
-
-  
-  function getDirectionsLocation() {
-    console.log("getDirectionsLocation");
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showDirectionsPosition);
-    } else {
-      z.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
-
-  function showDirectionsPosition(position) {
-    console.log("showDirectionsPosition");
-    directionsLatitude = position.coords.latitude;
-    directionsLongitude = position.coords.longitude;
-    directionsLatLng = new google.maps.LatLng(directionsLatitude,directionsLongitude);
-    getDirections();
-  }
-
-  function getDirections() {
-    console.log('getDirections');
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    //start = new google.maps.LatLng(directionsLatLng);
-    var directionsOptions = {
-      zoom:12,
-      center: start
-    }
-    directionsMap = new google.maps.Map(document.getElementById("directions-canvas"), directionsOptions);
-    directionsDisplay.setMap(directionsMap);
-    calcRoute();
-  }
-
-  function calcRoute() {
-    console.log("calcRoute");
-    start = directionsLatLng;
-    end = "1515 Eubank Blvd SE, Albuquerque, NM 87123";
-    var request = {
-      origin:start,
-      destination:end,
-      travelMode: google.maps.TravelMode.DRIVING
-    };
-    directionsService.route(request, function(result, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
-        directionsDisplay.setDirections(result);
-      }
-    });
-  }
-
-  $( document ).on( "pageshow", "#directionsPage", function( event ) {
-    getDirectionsLocation();
-  });
-
     //traveltimespage
     var w = document.getElementById(travelTimes);
     var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
@@ -193,40 +134,9 @@ $(document).ready(function () {
     }
   
 
-    function createTable() {
-      var table = document.getElementById('matrix');
-      var tr = addRow(table);
-      addElement(tr);
-      for (var j = 0; j < destinations.length; j++) {
-        var td = addElement(tr);
-        td.setAttribute("class", "destination");
-        td.appendChild(document.createTextNode(destinations[j]));
-      }
-      for (var i = 0; i < origins.length; i++) {
-        var tr = addRow(table);
-        var td = addElement(tr);
-        td.setAttribute("class", "origin");
-        td.appendChild(document.createTextNode(origins[i]));
-        for (var j = 0; j < destinations.length; j++) {
-          var td = addElement(tr, 'element-' + i + '-' + j);
-          td.onmouseover = getRouteFunction(i,j);
-          td.onclick = getRouteFunction(i,j);
-        }
-      }
-    }
-    function populateTable(rows) {
-      for (var i = 0; i < rows.length; i++) {
-        for (var j = 0; j < rows[i].elements.length; j++) {
-          var distance = rows[i].elements[j].distance.text;
-          var duration = rows[i].elements[j].duration.text;
-          var td = document.getElementById('element-' + i + '-' + j);
-          td.innerHTML = distance + "<br/>" + duration;
-        }
-      }
-    }
   function getTravelTimes() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.getCurrentPosition(showDurations);
     } else {
       w.innerHTML = "Geolocation is not supported by this browser.";
     }

@@ -4,7 +4,6 @@
 		<ul>
 			<li><a href="#homePage">Geolocation</a></li>
 			<li><a href="#mapPage">Traffic Map</a></li>
-			<li><a href="#directionsPage">Directions</a></li>
 			<li><a href="#traveltimesPage">Travel Times</a></li>
 		</ul>
 	</div><!-- /navbar -->
