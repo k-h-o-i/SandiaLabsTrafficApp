@@ -37,8 +37,8 @@ $(document).ready(function () {
 
   function showMapPosition(position) {
     console.log("showMapPosition");
-    mapLatitude = 35.049287;
-    mapLongitude = -106.542320;
+    mapLatitude = 35.047646;
+    mapLongitude = -106.582581;
     SandiaLabs = new google.maps.LatLng(mapLatitude,mapLongitude);
     getMap();
   }
@@ -54,9 +54,29 @@ $(document).ready(function () {
     var trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);    
     var marker = new google.maps.Marker({
-      position: SandiaLabs,
+      position: Carlislse,
       map: map,
-      title:"Sandia Labs"
+      title:"Carlisle Gate"
+    });
+    var marker = new google.maps.Marker({
+      position: Truman,
+      map: map,
+      title:"Truman Gate"
+    });
+    var marker = new google.maps.Marker({
+      position: Wyoming,
+      map: map,
+      title:"Wyoming Gate"
+    });
+    var marker = new google.maps.Marker({
+      position: Gibson,
+      map: map,
+      title:"Gibson Gate"
+    });
+    var marker = new google.maps.Marker({
+      position: Eubank,
+      map: map,
+      title:"Eubank Gate"
     });
   }
 
