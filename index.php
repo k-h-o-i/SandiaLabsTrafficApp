@@ -7,18 +7,6 @@
 	<link rel="stylesheet" href="geolocation.css" />
 </head>
 <body>
-<!-- Start of second page -->
-<div data-role="page" id="mapPage">
-
-<?php include("header.php") ?>
-
-	<div role="main" class="ui-content">
-		<div id="map-canvas">map-canvas</div>
-	</div><!-- /content -->
-
-	<?php include("footer.php") ?>
-</div><!-- /page -->
-
 <!-- Start of home page -->
 <div data-role="page" id="homePage">
 
@@ -32,6 +20,20 @@
 
 	<?php include("footer.php") ?>
 </div><!-- /page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="mapPage">
+
+<?php include("header.php") ?>
+
+	<div role="main" class="ui-content">
+		<div id="map-canvas">map-canvas</div>
+	</div><!-- /content -->
+
+	<?php include("footer.php") ?>
+</div><!-- /page -->
+
+
 
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
