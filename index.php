@@ -7,20 +7,6 @@
 	<link rel="stylesheet" href="geolocation.css" />
 </head>
 <body>
-<!-- Start of first page -->
-<div data-role="page" id="homePage">
-
-	<?php include("header.php") ?>
-
-	<div role="main" class="ui-content">
-		<p>Geolocation Page</p>
-		<div id="geoLocation">geoLocation</div>
-		<button id="getGeolocation">get geolocation</button>
-	</div><!-- /content -->
-
-	<?php include("footer.php") ?>
-</div><!-- /page -->
-
 <!-- Start of second page -->
 <div data-role="page" id="mapPage">
 
