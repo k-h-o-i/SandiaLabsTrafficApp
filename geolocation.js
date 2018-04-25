@@ -115,15 +115,15 @@ $(document).ready(function () {
             var element = results[j];
             var distance = element.distance.text;
             var duration = element.duration.text;
-            var duration_with_traffic = element.duration_in_traffic.text;
+            var traffic = element.duration_in_traffic.text;
             var from = origins[i];
             var to = destinations[j];
             console.log(response);
-            w.innerHTML = "Carlisle: " + duration_with_traffic + 
-            "<br>Truman: " + duration_with_traffic +
-            "<br>Gibson: " + duration_with_traffic +
-            "<br>Wyoming: " + duration_with_traffic +
-            "<br> Eubank: " + duration_with_traffic;
+            w.innerHTML = "Carlisle: " + response.rows[0].elements[0].duration_in_traffic.text + 
+            "<br>Truman: " + response.rows[0].elements[1].duration_in_traffic.text +
+            "<br>Gibson: " + response.rows[0].elements[2].duration_in_traffic.text +
+            "<br>Wyoming: " + response.rows[0].elements[3].duration_in_traffic.text +
+            "<br>Eubank: " + response.rows[0].elements[4].duration_in_traffic.text;
           }
         }
       }
