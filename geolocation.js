@@ -115,6 +115,10 @@ $(document).ready(function () {
       origins: [latlng],
       destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
       travelMode: 'DRIVING',
+      drivingOptions: {
+        departureTime: new Date(Date.now() + 0),  // for the time N milliseconds from now.
+        trafficModel: 'bestguess'
+      },
       unitSystem: google.maps.UnitSystem.METRIC,
       avoidHighways: false,
       avoidTolls: false,
@@ -131,9 +135,15 @@ $(document).ready(function () {
             var element = results[j];
             var distance = element.distance.text;
             var duration = element.duration.text;
+            var duration_with_traffic = element.duration_in_traffic.text;
             var from = origins[i];
             var to = destinations[j];
             console.log(response);
+            w.innerHTML = "Carlisle: " + duration_with_traffic + 
+            "<br>Truman: " + duration_with_traffic +
+            "<br>Gibson: " + duration_with_traffic +
+            "<br>Wyoming: " + duration_with_traffic +
+            "<br> Eubank: " + duration_with_traffic;
           }
         }
       }
