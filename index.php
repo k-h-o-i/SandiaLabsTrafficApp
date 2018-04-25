@@ -33,8 +33,8 @@
 	<?php include("footer.php") ?>
 </div><!-- /page -->
 
-<!-- Start of third page -->
-<div data-role="page" id="traveltimesPage">
+<!-- Start of home page -->
+<div data-role="page" id="homePage">
 
 	<?php include("header.php") ?>
 
