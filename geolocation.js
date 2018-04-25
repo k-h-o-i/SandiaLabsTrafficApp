@@ -139,11 +139,11 @@ $(document).ready(function () {
             var from = origins[i];
             var to = destinations[j];
             console.log(response);
-            w.innerHTML = "Carlisle: " + traffic + 
-            "<br>Truman: " + traffic +
-            "<br>Gibson: " + traffic +
-            "<br>Wyoming: " + traffic +
-            "<br>Eubank: " + traffic;
+            w.innerHTML = "Carlisle: " + response.rows[0].elements[0].duration_in_traffic.text + 
+            "<br>Truman: " + response.rows[0].elements[1].duration_in_traffic.text +
+            "<br>Gibson: " + response.rows[0].elements[2].duration_in_traffic.text +
+            "<br>Wyoming: " + response.rows[0].elements[3].duration_in_traffic.text +
+            "<br>Eubank: " + response.rows[0].elements[4].duration_in_traffic.text;
           }
         }
       }
