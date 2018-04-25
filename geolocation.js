@@ -135,15 +135,15 @@ $(document).ready(function () {
             var element = results[j];
             var distance = element.distance.text;
             var duration = element.duration.text;
-            var duration_with_traffic = element.duration_in_traffic.text;
+            var traffic = element.duration_in_traffic.text;
             var from = origins[i];
             var to = destinations[j];
             console.log(response);
-            w.innerHTML = "Carlisle: " + duration_with_traffic + 
-            "<br>Truman: " + duration_with_traffic +
-            "<br>Gibson: " + duration_with_traffic +
-            "<br>Wyoming: " + duration_with_traffic +
-            "<br> Eubank: " + duration_with_traffic;
+            w.innerHTML = "Carlisle: " + traffic + 
+            "<br>Truman: " + traffic +
+            "<br>Gibson: " + traffic +
+            "<br>Wyoming: " + traffic +
+            "<br>Eubank: " + traffic;
           }
         }
       }
