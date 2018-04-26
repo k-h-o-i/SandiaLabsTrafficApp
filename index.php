@@ -43,7 +43,7 @@
 		<p>Gibson Gate:    5:30 a.m. to  9 p.m., Monday through Friday</p>
 		<p>Eubank Gate:  24 hours / 7 days a week</p>
 		<p>Truman Gate:  24 hours / 7 days a week</p>
-=	</div><!-- /content -->
+	</div><!-- /content -->
 
 	<?php include("footer.php") ?>
 </div><!-- /page -->
