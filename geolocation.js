@@ -69,7 +69,7 @@ $(document).ready(function () {
   var y = document.getElementById("map-canvas");
   var mapLatitude;
   var mapLongitude;
-  var SandiaLabs;
+  var userlocation;
   var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
   var Truman = new google.maps.LatLng(35.057476, -106.588603);
   var Gibson = new google.maps.LatLng(35.058033, -106.561149);
@@ -87,9 +87,9 @@ $(document).ready(function () {
 
   function showMapPosition(position) {
     console.log("showMapPosition");
-    mapLatitude = 35.047646;
-    mapLongitude = -106.582581;
-    SandiaLabs = new google.maps.LatLng(mapLatitude,mapLongitude);
+    mapLatitude = position.coords.latitude;
+    mapLongitude = position.coords.longitude;
+    userlocation = new google.maps.LatLng(mapLatitude,mapLongitude);
     getMap();
   }
 
@@ -97,36 +97,65 @@ $(document).ready(function () {
     console.log("getMap");
     var mapOptions = {
       zoom: 14,
-      center: new google.maps.LatLng(mapLatitude, mapLongitude)
+      center: new google.maps.LatLng( 35.074210, -106.584101 )
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
                               mapOptions);
     var trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);    
-    var marker = new google.maps.Marker({
+    var marker0 = new google.maps.Marker({
+      position: userlocation,
+      map: map,
+      title:"You are here!",
+      icon: {
+        url: "images/markers/svg/sports.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
+    });
+    var marker1 = new google.maps.Marker({
       position: Carlislse,
       map: map,
-      title:"Carlisle Gate"
+      title:"Carlisle Gate",
+      icon: {
+        url: "images/markers/svg/little-flag.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
     });
     var marker2 = new google.maps.Marker({
       position: Truman,
       map: map,
-      title:"Truman Gate"
+      title:"Truman Gate",
+      icon: {
+        url: "images/markers/svg/little-flag.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
     });
     var marker3 = new google.maps.Marker({
       position: Wyoming,
       map: map,
-      title:"Wyoming Gate"
+      title:"Wyoming Gate",
+      icon: {
+        url: "images/markers/svg/little-flag.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
     });
     var marker4 = new google.maps.Marker({
       position: Gibson,
       map: map,
-      title:"Gibson Gate"
+      title:"Gibson Gate",
+      icon: {
+        url: "images/markers/svg/little-flag.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
     });
     var marker5 = new google.maps.Marker({
       position: Eubank,
       map: map,
-      title:"Eubank Gate"
+      title:"Eubank Gate",
+      icon: {
+        url: "images/markers/svg/little-flag.svg",
+        scaledSize: new google.maps.Size(32, 32)
+      }
     });
   }
 
