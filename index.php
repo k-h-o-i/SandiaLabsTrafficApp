@@ -33,6 +33,21 @@
 	<?php include("footer.php") ?>
 </div><!-- /page -->
 
+<!-- Start of third page -->
+<div data-role="page" id="hoursPage">
+
+<?php include("header.php") ?>
+
+	<div role="main" class="ui-content">
+		<p>Wyoming Gate:  05:30 a.m. to 7 p.m., Monday through Friday</p>
+		<p>Gibson Gate:    5:30 a.m. to  9 p.m., Monday through Friday</p>
+		<p>Eubank Gate:  24 hours / 7 days a week</p>
+		<p>Truman Gate:  24 hours / 7 days a week</p>
+=	</div><!-- /content -->
+
+	<?php include("footer.php") ?>
+</div><!-- /page -->
+
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTZea67jn4YSPIGu0dNTHRyB1jnvo1Q00"></script>
