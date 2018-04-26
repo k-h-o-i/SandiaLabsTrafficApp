@@ -15,7 +15,7 @@
 	<div role="main" class="ui-content">
 		<p>Travel Times Page</p>
 		<div id="travelTimes">times</div>
-		<button id="getTravelTimes" onClick="console.log('can\'t touch this')">get Travel Times</button>
+		<button id="getTravelTimes" onClick="console.log('can\'t touch this')">Click To Find Travel Times</button>
 	</div><!-- /content -->
 
 	<?php include("footer.php") ?>
