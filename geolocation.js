@@ -107,6 +107,7 @@ $(document).ready(function () {
       position: userlocation,
       map: map,
       title:"You are here!",
+      label:"You are Here!",
       icon: {
         url: "images/markers/svg/sports.svg",
         scaledSize: new google.maps.Size(32, 32)
@@ -116,6 +117,7 @@ $(document).ready(function () {
       position: Carlislse,
       map: map,
       title:"Carlisle Gate",
+      label:"Carlisle Gate",
       icon: {
         url: "images/markers/svg/little-flag.svg",
         scaledSize: new google.maps.Size(32, 32)
@@ -125,6 +127,7 @@ $(document).ready(function () {
       position: Truman,
       map: map,
       title:"Truman Gate",
+      label:"Truman Gate",
       icon: {
         url: "images/markers/svg/little-flag.svg",
         scaledSize: new google.maps.Size(32, 32)
@@ -134,6 +137,7 @@ $(document).ready(function () {
       position: Wyoming,
       map: map,
       title:"Wyoming Gate",
+      label: "Wyoming Gate",
       icon: {
         url: "images/markers/svg/little-flag.svg",
         scaledSize: new google.maps.Size(32, 32)
@@ -143,6 +147,7 @@ $(document).ready(function () {
       position: Gibson,
       map: map,
       title:"Gibson Gate",
+      label:"Gibson Gate",
       icon: {
         url: "images/markers/svg/little-flag.svg",
         scaledSize: new google.maps.Size(32, 32)
@@ -152,6 +157,7 @@ $(document).ready(function () {
       position: Eubank,
       map: map,
       title:"Eubank Gate",
+      label:"Eubank Gate",
       icon: {
         url: "images/markers/svg/little-flag.svg",
         scaledSize: new google.maps.Size(32, 32)
