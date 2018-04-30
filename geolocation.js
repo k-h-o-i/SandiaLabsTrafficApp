@@ -6,8 +6,12 @@ $(document).ready(function () {
   var Gibson = new google.maps.LatLng(35.058033, -106.561149);
   var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
   var Eubank = new google.maps.LatLng(35.054138, -106.533598 );
-  var w = document.getElementById("travelTimes");
-  
+  var write1 = document.getElementById("Carlisle");
+  var write2 = document.getElementById("Truman");
+  var write3 = document.getElementById("Gibson");
+  var write4 = document.getElementById("Wyoming");
+  var write5 = document.getElementById("Eubank");
+
       function getTravelTimes() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
@@ -50,11 +54,11 @@ $(document).ready(function () {
               var from = origins[i];
               var to = destinations[j];
               console.log(response);
-              w.innerHTML = "Carlisle: " + response.rows[0].elements[0].duration_in_traffic.text + 
-              "<br>Truman: " + response.rows[0].elements[1].duration_in_traffic.text +
-              "<br>Gibson: " + response.rows[0].elements[2].duration_in_traffic.text +
-              "<br>Wyoming: " + response.rows[0].elements[3].duration_in_traffic.text +
-              "<br>Eubank: " + response.rows[0].elements[4].duration_in_traffic.text;
+              write1.innerHTML = '<a href="https://www.google.com/maps/dir//35.055230,+-106.604314/@35.0552152,-106.606515,17z/data=!4m6!4m5!1m0!1m3!2m2!1d-106.604314!2d35.05523">Carlisle:</a>' + response.rows[0].elements[0].duration_in_traffic.text; 
+              write2.innerHTML = '<a href="https://www.google.com/maps/dir//35.056025,-106.58981/@35.0771572,-106.6010017,14z">Truman:</a>' + response.rows[0].elements[1].duration_in_traffic.text;
+              write3.innerHTML = '<a href="https://www.google.com/maps/dir//35.058033,+-106.561149/@35.0581568,-106.5958993,13z/data=!4m6!4m5!1m0!1m3!2m2!1d-106.561149!2d35.058033">Gibson:</a>' + response.rows[0].elements[2].duration_in_traffic.text;
+              write4.innerHTML = '<a href="https://www.google.com/maps/dir//35.048843,+-106.550587+/@35.0505511,-106.5520711,17z/data=!4m6!4m5!1m0!1m3!2m2!1d-106.550587!2d35.048843">Wyoming:</a>' + response.rows[0].elements[3].duration_in_traffic.text;
+              write5.innerHTML = '<a href="https://www.google.com/maps/dir//35.054138,+-106.533598+/@35.0541587,-106.5683305,13z/data=!4m6!4m5!1m0!1m3!2m2!1d-106.533598!2d35.054138">Eubank:</a>' + response.rows[0].elements[4].duration_in_traffic.text;
             }
           }
         }

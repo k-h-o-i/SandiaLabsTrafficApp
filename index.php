@@ -14,7 +14,11 @@
 
 	<div role="main" class="ui-content">
 		<p>Travel Times Page</p>
-		<div id="travelTimes">times</div>
+		<div id="Carlisle">Carlisle</div>
+		<div id="Truman">Truman</div>
+		<div id="Gibson">Gibson</div>
+		<div id="Wyoming">Wyoming</div>
+		<div id="Eubank">Eubank</div>
 		<button id="getTravelTimes" onClick="console.log('can\'t touch this')">Click To Find Travel Times</button>
 	</div><!-- /content -->
 
