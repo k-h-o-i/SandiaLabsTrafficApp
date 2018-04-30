@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 //traveltimespage
-  var Carlislse = new google.maps.LatLng(35.055230, -106.604314);
+  var Carlisle = new google.maps.LatLng(35.055230, -106.604314);
   var Truman = new google.maps.LatLng(35.057476, -106.588603);
   var Gibson = new google.maps.LatLng(35.058033, -106.561149);
   var Wyoming = new google.maps.LatLng(35.048843, -106.550587);
@@ -28,7 +28,7 @@ $(document).ready(function () {
       var service = new google.maps.DistanceMatrixService();
       service.getDistanceMatrix({
         origins: [latlng],
-        destinations: [Carlislse, Truman, Gibson, Wyoming, Eubank],
+        destinations: [Carlisle, Truman, Gibson, Wyoming, Eubank],
         travelMode: 'DRIVING',
         drivingOptions: {
           departureTime: new Date(Date.now() + 0),  // for the time N milliseconds from now.
