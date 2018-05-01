@@ -14,11 +14,13 @@
 
 	<div role="main" class="ui-content">
 		<p>Travel Times Page</p>
-		<div id="Carlisle">Carlisle</div>
-		<div id="Truman">Truman</div>
-		<div id="Gibson">Gibson</div>
-		<div id="Wyoming">Wyoming</div>
-		<div id="Eubank">Eubank</div>
+    <div id="travelTimeBox">
+      <div id="gate0">Carlisle</div>
+      <div id="gate1">Truman</div>
+      <div id="gate2">Gibson</div>
+      <div id="gate3">Wyoming</div>
+      <div id="gate4">Eubank</div>
+    </div>
 		<button id="getTravelTimes" onClick="console.log('can\'t touch this')">Click To Find Travel Times</button>
 	</div><!-- /content -->
 
